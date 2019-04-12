@@ -1,7 +1,6 @@
 # saaxr
-Spatial Audio &amp; Art XR App
 
-# Project Title
+# AT&T 5G Hackathon -- Spatial Audio &amp; Art XR App
 
 One Paragraph of project description goes here
 

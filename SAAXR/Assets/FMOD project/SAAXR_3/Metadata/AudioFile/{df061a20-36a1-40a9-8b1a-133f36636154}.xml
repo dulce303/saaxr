@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{df061a20-36a1-40a9-8b1a-133f36636154}">
+        <property name="assetPath">
+            <value>ML_Trap_Stereo_Drum_145.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>103.78376417233559</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{a812127f-0f58-48d0-b2fc-6bbbe8abceaa}</destination>
+        </relationship>
+    </object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{cc37afd6-c444-4f41-9c53-59029efd116a}">
+        <property name="assetPath">
+            <value>Game Sound/377830__newagesoup__long-wispy-woosh1.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>1.875</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{a812127f-0f58-48d0-b2fc-6bbbe8abceaa}</destination>
+        </relationship>
+    </object>
+</objects>

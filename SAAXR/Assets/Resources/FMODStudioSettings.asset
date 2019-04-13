@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: C:\Users\nirnn\Documents\FMOD Studio\SAAXR_3\SAAXR_3.fspro
-  SourceProjectPathUnformatted: C:\Users\nirnn\Documents\FMOD Studio\SAAXR_3\SAAXR_3.fspro
-  SourceBankPathUnformatted: C:\Users\nirnn\Documents\FMOD Studio\SAAXR_3\Build
+  sourceProjectPath: Assets\FMOD project\SAAXR_3\SAAXR_3.fspro
+  SourceProjectPathUnformatted: Assets\FMOD project\SAAXR_3\SAAXR_3.fspro
+  SourceBankPathUnformatted: Assets\FMOD project\SAAXR_3\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0

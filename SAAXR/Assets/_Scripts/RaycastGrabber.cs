@@ -50,11 +50,15 @@ public class RaycastGrabber : MonoBehaviour
         if (_canGrab){
             _currentGrabbable.transform.parent = _grabPoint;
             _currentGrabbable.transform.position = _grabPoint.position;
+
             _canGrab = false;
+            _hasItem = true;
         } else if (_canDrop){
             _currentGrabbable.transform.parent = _currentDropzone.transform;
             _currentGrabbable.transform.position = _currentDropzone.transform.position;
+            _currentGrabbable.transform.rotation = _currentDropzone.transform.rotation;
             _canDrop = false;
+            _hasItem = false;
         }
     }
 
@@ -74,6 +78,7 @@ public class RaycastGrabber : MonoBehaviour
                 _laserLineRenderer.SetPosition(1, hit.point);
                 Debug.Log("Has item and hit dropzone");
                 _canDrop = true;
+                _currentDropzone = hit.transform.gameObject;
 
             }
             else if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 50f))
@@ -82,12 +87,14 @@ public class RaycastGrabber : MonoBehaviour
                 _laserLineRenderer.SetPosition(1, hit.point);
                 Debug.Log("Has item and hit non-dropzone");
                 _canDrop = false;
+                _currentDropzone = null;
             }
             else {
                 _laserLineRenderer.material = _missMaterial;
                 _laserLineRenderer.SetPosition(1, transform.TransformDirection(Vector3.forward) * 10f);
                 Debug.Log("Has item and missed");
                 _canDrop = false;
+                _currentDropzone = null;
             }
         } else if (!_hasItem){
             _canDrop = false;
@@ -97,18 +104,21 @@ public class RaycastGrabber : MonoBehaviour
                 _laserLineRenderer.SetPosition(1, hit.point);
                 Debug.Log("Doesn't have item and hit grabbable");
                 _canGrab = true;
+                _currentGrabbable = hit.transform.gameObject;
             }
             else if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 50f)){
                 _laserLineRenderer.material = _missMaterial;
                 _laserLineRenderer.SetPosition(1, hit.point);
                 Debug.Log("Doesn't have item and hit non-grabbable");
                 _canGrab = false;
+                _currentGrabbable = null;
             }
             else {
                 _laserLineRenderer.material = _missMaterial;
                 _laserLineRenderer.SetPosition(1, transform.TransformDirection(Vector3.forward) * 10f);
                 Debug.Log("Doesn't have item and didn't hit");
                 _canGrab = false;
+                _currentGrabbable = null;
             }
         }
 

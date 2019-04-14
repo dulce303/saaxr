@@ -19,19 +19,17 @@ public class RaycastGrabber : MonoBehaviour
     public GameObject _volumeGUI;
     private float _touchpadRadius;
 
-
-    //public int _grabbableLayer = 8;
-    //public int _dropzoneLayer = 9;
-
     private bool _hasItem = false;
     private bool _canGrab = false;
     private bool _canDrop = false;
     private bool _canOpenContainer = false;
-    private GameObject _currentGrabbable = null;
+
+
+    private StemSoundBehavior _currentGrabbable = null;
     private DropzoneBehavior _currentDropzone = null;
-    private StemSoundBehavior _ssBehavior = null;
-    private DropzoneBehavior _dzBehavior = null;
-    private ContainerBehavior _containerBehavior = null;
+    private ContainerBehavior _currentContainerBehavior = null;
+    private StemSoundBehavior _currentPickedUpStem = null;
+
 
     private LineRenderer _laserLineRenderer = null;
     private ControllerConnectionHandler _controllerConnectionHandler = null;
@@ -53,8 +51,6 @@ public class RaycastGrabber : MonoBehaviour
 
         _volumeGUI.SetActive(false);
 
-        //_grabbableLayer = 1 << _grabbableLayer;
-        //_dropzoneLayer = 1 << _dropzoneLayer;
     }
 
 	private void OnDestroy()
@@ -65,61 +61,47 @@ public class RaycastGrabber : MonoBehaviour
 
     private void HandleOnTriggerDown(byte controllerId, float pressure)
     {
-        
-    }
+        if (_canGrab)
+        {
+            if (_currentGrabbable != null)
+            {
+                _currentPickedUpStem = _currentGrabbable;
+                _currentPickedUpStem.transform.SetParent(_grabPoint);
+                _currentPickedUpStem.transform.position = _grabPoint.position;
 
-    /*
-    private void HandleOnTriggerDown(byte controllerId, float pressure)
-    {
-        if (_canGrab){
-            _currentGrabbable.transform.parent = _grabPoint;
-            _currentGrabbable.transform.position = _grabPoint.position;
-
-            _canGrab = false;
-            _hasItem = true;
-
-            if (_currentGrabbable.CompareTag("Stem")){
-                _ssBehavior = _currentGrabbable.GetComponentInChildren<StemSoundBehavior>();
-                _dzBehavior = _ssBehavior.GetDropZone();
-
-                _ssBehavior.SetPickupMix();
-                _dzBehavior.RemoveStem();
+                _currentGrabbable = null;
 
                 _volumeGUI.SetActive(true);
+                _canGrab = false;
+
             }
-        } else if (_canDrop)
+        }
+        else if (_canDrop)
         {
-            _currentGrabbable.transform.parent = _currentDropzone.transform;
-            _currentGrabbable.transform.position = _currentDropzone.transform.position;
-            _currentGrabbable.transform.rotation = _currentDropzone.transform.rotation;
-            _canDrop = false;
-            _hasItem = false;
-
-            _dzBehavior = _currentDropzone.GetComponent<DropzoneBehavior>();
-            _ssBehavior = _currentGrabbable.GetComponentInChildren<StemSoundBehavior>();
-            if (_dzBehavior._isMuter)
+            if (_currentDropzone != null && _currentPickedUpStem != null)
             {
-                _ssBehavior.SetMute();
-            }
-            else
-            {
-                _ssBehavior.SetMix(_dzBehavior);
-                _dzBehavior.SetStem(_ssBehavior);
-            }
-            _dzBehavior = null;
-            _ssBehavior = null;
+                _currentPickedUpStem.transform.SetParent(_currentDropzone.transform);
+                _currentPickedUpStem.transform.position = _currentDropzone.transform.position;
+                _currentPickedUpStem.transform.rotation = _currentDropzone.transform.rotation;
 
-            _volumeGUI.SetActive(false);
+                _currentPickedUpStem = null;
+                _currentDropzone = null;
+
+                _volumeGUI.SetActive(false);
+
+            }
         } 
         else if (_canOpenContainer)
         {
-            _containerBehavior.Open();
-            _containerBehavior = null;
+            if (_currentContainerBehavior != null)
+            {
+                _currentContainerBehavior.Open();
+                _currentContainerBehavior = null;
+            }
         }
     }
-    */
 
-	// Update is called once per frame
+
 	void Update()
     {
         LaserGrabber();
@@ -141,9 +123,9 @@ public class RaycastGrabber : MonoBehaviour
 
         if (controller.Touch1Active)
         {
-            //_ssBehavior.SetPitch(Mathf.Clamp(controller.Touch1PosAndForce.y, -3.0f, 3.0f));
+
             var _volume = Mathf.Clamp(controller.Touch1PosAndForce.x, 0.0f, 1.0f);
-            _ssBehavior.SetVolume(_volume);
+            _currentGrabbable.SetVolume(_volume);
             _volume = Mathf.RoundToInt((_volume * 10));
             _volumeNumber.SetText(_volume.ToString());
         }
@@ -154,7 +136,7 @@ public class RaycastGrabber : MonoBehaviour
 
     private void LaserGrabber()
     {
-        Vector3 _lineEndPoint;
+        Vector3 _lineEndPoint = new Vector3();
         bool _useHitMat = false;
 
         RaycastHit hit;
@@ -171,7 +153,7 @@ public class RaycastGrabber : MonoBehaviour
             }
             else if (hit.transform.CompareTag("Container"))
             {
-                _containerBehavior = hit.transform.GetComponent<ContainerBehavior>();
+                _currentContainerBehavior = hit.transform.GetComponent<ContainerBehavior>();
                 _canOpenContainer = true;
 
                 _lineEndPoint = hit.point;
@@ -182,7 +164,7 @@ public class RaycastGrabber : MonoBehaviour
             {
                 //If we've got an item we need to
                 _canGrab = false;
-                _volumeGUI.SetActive(true);
+
 
                 if (hit.transform.CompareTag("Dropzone"))
                 {
@@ -207,12 +189,13 @@ public class RaycastGrabber : MonoBehaviour
             {
                 //If we don't have an item we need to
                 _canDrop = false;
-                _volumeGUI.SetActive(false);
+
 
                 if (hit.transform.CompareTag("Stem"))
                 {
                     _canGrab = true;
-                    _ssBehavior = hit.transform.GetComponent<StemSoundBehavior>();
+                    if (_currentGrabbable == null)
+                        _currentGrabbable = hit.transform.GetComponent<StemSoundBehavior>();
 
                     _lineEndPoint = hit.point;
                     _useHitMat = true;
@@ -240,8 +223,7 @@ public class RaycastGrabber : MonoBehaviour
     private void ClearAllCurrents(){
         _currentDropzone = null;
         _currentGrabbable = null;
-        _ssBehavior = null;
-        _containerBehavior = null;
+        _currentContainerBehavior = null;
         _canGrab = false;
         _canDrop = false;
         _canOpenContainer = false;
@@ -391,6 +373,58 @@ public class RaycastGrabber : MonoBehaviour
         }
     }
     */
+
+    //Old trigger behavior
+    /*
+private void HandleOnTriggerDown(byte controllerId, float pressure)
+{
+    if (_canGrab){
+        _currentGrabbable.transform.parent = _grabPoint;
+        _currentGrabbable.transform.position = _grabPoint.position;
+
+        _canGrab = false;
+        _hasItem = true;
+
+        if (_currentGrabbable.CompareTag("Stem")){
+            _ssBehavior = _currentGrabbable.GetComponentInChildren<StemSoundBehavior>();
+            _dzBehavior = _ssBehavior.GetDropZone();
+
+            _ssBehavior.SetPickupMix();
+            _dzBehavior.RemoveStem();
+
+            _volumeGUI.SetActive(true);
+        }
+    } else if (_canDrop)
+    {
+        _currentGrabbable.transform.parent = _currentDropzone.transform;
+        _currentGrabbable.transform.position = _currentDropzone.transform.position;
+        _currentGrabbable.transform.rotation = _currentDropzone.transform.rotation;
+        _canDrop = false;
+        _hasItem = false;
+
+        _dzBehavior = _currentDropzone.GetComponent<DropzoneBehavior>();
+        _ssBehavior = _currentGrabbable.GetComponentInChildren<StemSoundBehavior>();
+        if (_dzBehavior._isMuter)
+        {
+            _ssBehavior.SetMute();
+        }
+        else
+        {
+            _ssBehavior.SetMix(_dzBehavior);
+            _dzBehavior.SetStem(_ssBehavior);
+        }
+        _dzBehavior = null;
+        _ssBehavior = null;
+
+        _volumeGUI.SetActive(false);
+    } 
+    else if (_canOpenContainer)
+    {
+        _containerBehavior.Open();
+        _containerBehavior = null;
+    }
+}
+*/
 
 
 }

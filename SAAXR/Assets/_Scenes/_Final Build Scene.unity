@@ -246,12 +246,12 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0237cdc4596d72f45a73ad2781c030bd, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.504
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -433,12 +433,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 142607462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.121, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3921774598828677200}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &224508475
 GameObject:
@@ -678,12 +678,12 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6d6203a13c4bbfc4298fcf545d4be81c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.504
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -943,12 +943,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269859134}
   m_LocalRotation: {x: -0, y: -0.69214326, z: 0, w: -0.72176015}
-  m_LocalPosition: {x: -1.16, y: 0, z: 0}
+  m_LocalPosition: {x: -1.16, y: -0.121, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 7676607271655270135}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -272.4, z: 0}
 --- !u!1 &290603021
 GameObject:
@@ -1146,6 +1146,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.12858509
       objectReference: {fileID: 0}
+    - target: {fileID: -6081470830831867213, guid: bf5b1b2531fda4250abc3a5c194eee36,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.49054706
+      objectReference: {fileID: 0}
+    - target: {fileID: -6081470830831867213, guid: bf5b1b2531fda4250abc3a5c194eee36,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5023249
+      objectReference: {fileID: 0}
+    - target: {fileID: -6081470830831867213, guid: bf5b1b2531fda4250abc3a5c194eee36,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.47480616
+      objectReference: {fileID: 0}
+    - target: {fileID: -6081470830831867213, guid: bf5b1b2531fda4250abc3a5c194eee36,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.53065276
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf5b1b2531fda4250abc3a5c194eee36, type: 3}
 --- !u!1 &298684690 stripped
@@ -1180,12 +1200,12 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0dcb69a508b52074d9b12a7eef86f281, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.504
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -1509,12 +1529,12 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4989a13a027d853468eb1554da7c5c6b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.504
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -1896,7 +1916,7 @@ Transform:
   - {fileID: 841516486065247976}
   - {fileID: 836083683914368546}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &609142183
 GameObject:
@@ -2714,6 +2734,50 @@ Transform:
   m_Father: {fileID: 859870947}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &944425039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 944425040}
+  - component: {fileID: 944425041}
+  m_Layer: 0
+  m_Name: DummyCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &944425040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944425039}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.46, z: 0}
+  m_LocalScale: {x: 0.15, y: 1, z: 0.12}
+  m_Children: []
+  m_Father: {fileID: 3921774598828677200}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &944425041
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944425039}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.355248, y: 0.040000003, z: 12.080002}
+  m_Center: {x: -0.36350858, y: 0, z: 0.0000000019160193}
 --- !u!1 &962163684
 GameObject:
   m_ObjectHideFlags: 0
@@ -3752,22 +3816,22 @@ PrefabInstance:
     - target: {fileID: 6284974411115566096, guid: 0b795b74f51ac4e3e9a9767a08389933,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.33559316
+      value: -0.33559313
       objectReference: {fileID: 0}
     - target: {fileID: 6284974411115566096, guid: 0b795b74f51ac4e3e9a9767a08389933,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6804575
+      value: 0.6804574
       objectReference: {fileID: 0}
     - target: {fileID: 6284974411115566096, guid: 0b795b74f51ac4e3e9a9767a08389933,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.2894215
+      value: 0.28942147
       objectReference: {fileID: 0}
     - target: {fileID: 6284974411115566096, guid: 0b795b74f51ac4e3e9a9767a08389933,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.58360106
+      value: 0.583601
       objectReference: {fileID: 0}
     - target: {fileID: 707751869738076855, guid: 0b795b74f51ac4e3e9a9767a08389933,
         type: 3}
@@ -3778,6 +3842,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.039989416
+      objectReference: {fileID: 0}
+    - target: {fileID: -7156960014637489551, guid: 0b795b74f51ac4e3e9a9767a08389933,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.046534833
+      objectReference: {fileID: 0}
+    - target: {fileID: -7156960014637489551, guid: 0b795b74f51ac4e3e9a9767a08389933,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.59024096
+      objectReference: {fileID: 0}
+    - target: {fileID: -7156960014637489551, guid: 0b795b74f51ac4e3e9a9767a08389933,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.44251433
+      objectReference: {fileID: 0}
+    - target: {fileID: -7156960014637489551, guid: 0b795b74f51ac4e3e9a9767a08389933,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6735216
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b795b74f51ac4e3e9a9767a08389933, type: 3}
@@ -3813,12 +3897,12 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f65a7e759c74ec141a5b4bc0cd272db8, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.504
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -4386,7 +4470,7 @@ AudioSource:
   Loop: 1
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -4575,7 +4659,7 @@ AudioSource:
   Loop: 1
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -4777,6 +4861,26 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: af69d9ac873e79d4289f76f994a10bf7, type: 2}
+    - target: {fileID: -6081470830831867213, guid: 9c4dc2c7c2d964f2980c00c31525ff6c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.46484014
+      objectReference: {fileID: 0}
+    - target: {fileID: -6081470830831867213, guid: 9c4dc2c7c2d964f2980c00c31525ff6c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5281625
+      objectReference: {fileID: 0}
+    - target: {fileID: -6081470830831867213, guid: 9c4dc2c7c2d964f2980c00c31525ff6c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.46709308
+      objectReference: {fileID: 0}
+    - target: {fileID: -6081470830831867213, guid: 9c4dc2c7c2d964f2980c00c31525ff6c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5355298
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c4dc2c7c2d964f2980c00c31525ff6c, type: 3}
 --- !u!1 &1494272967 stripped
@@ -4811,12 +4915,12 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0237cdc4596d72f45a73ad2781c030bd, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.504
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -6064,22 +6168,22 @@ PrefabInstance:
     - target: {fileID: 1018931497261425781, guid: bff70675fbc9f478683c24995f7753dc,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.8320119
+      value: 0.832012
       objectReference: {fileID: 0}
     - target: {fileID: 1018931497261425781, guid: bff70675fbc9f478683c24995f7753dc,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.55260783
+      value: 0.5526079
       objectReference: {fileID: 0}
     - target: {fileID: 1018931497261425781, guid: bff70675fbc9f478683c24995f7753dc,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.034183603
+      value: -0.034183607
       objectReference: {fileID: 0}
     - target: {fileID: 1018931497261425781, guid: bff70675fbc9f478683c24995f7753dc,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.034816228
+      value: -0.03481623
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bff70675fbc9f478683c24995f7753dc, type: 3}
@@ -6115,12 +6219,12 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 860aecd7100cbb947957a7352f7a224a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.504
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -7251,12 +7355,12 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.55
+  m_Volume: 0.504
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -10199,12 +10303,12 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.55
+  m_Volume: 0.504
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -10346,6 +10450,7 @@ Transform:
   - {fileID: 4631405809036387404}
   - {fileID: 1917323077785886782}
   - {fileID: 685083953518493444}
+  - {fileID: 944425040}
   m_Father: {fileID: 142607463}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -139.01, z: 0}
@@ -12013,12 +12118,12 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: db05d5457c2a05d4d91495eb0cfeb052, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.504
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -13330,12 +13435,12 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.55
+  m_Volume: 0.504
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -14275,12 +14380,12 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2da01a88b95e86841a0c985ca45eb27f, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.504
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -14518,12 +14623,12 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 506b9f3c653d2d746bd1d280995eb74f, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.504
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -15015,7 +15120,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6688848737259197668}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 1.642531, z: -3.9}
+  m_LocalPosition: {x: -113, y: -49, z: 10}
   m_LocalScale: {x: 400, y: 400, z: 400}
   m_Children:
   - {fileID: 5058584817372537382}
@@ -15292,12 +15397,12 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6ab413b6de3c90147b3a005aa5c384b9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.504
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -15545,12 +15650,12 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 30be4d6076330724996eb83dbe15bf4a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.504
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -15786,12 +15891,12 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.55
+  m_Volume: 0.504
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -16491,12 +16596,12 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.55
+  m_Volume: 0.504
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -17503,12 +17608,12 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.55
+  m_Volume: 0.504
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -17698,12 +17803,12 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.55
+  m_Volume: 0.504
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1

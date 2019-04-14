@@ -170,7 +170,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 356662e512a174b80abc0796e7562abf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 356662e512a174b80abc0796e7562abf,
         type: 3}
@@ -244,7 +244,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 8ba79f6e4fae7476bb12d1cb09b8be30,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8ba79f6e4fae7476bb12d1cb09b8be30,
         type: 3}
@@ -261,6 +261,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 8ba79f6e4fae7476bb12d1cb09b8be30,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7557dbdf798093b4e8a6aede75d18018, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ba79f6e4fae7476bb12d1cb09b8be30, type: 3}
 --- !u!1 &234785114 stripped
@@ -282,7 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _chanceOfSoundPercent: 30
-  _lengthOfAnimation: 2
+  _lengthOfAnimation: 21
 --- !u!82 &234785116
 AudioSource:
   m_ObjectHideFlags: 0
@@ -451,6 +456,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: bf5b1b2531fda4250abc3a5c194eee36,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5859c716a1433b449aaec5858e93893c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf5b1b2531fda4250abc3a5c194eee36, type: 3}
 --- !u!1 &298684690 stripped
@@ -472,7 +482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _chanceOfSoundPercent: 30
-  _lengthOfAnimation: 2
+  _lengthOfAnimation: 32
 --- !u!82 &298684692
 AudioSource:
   m_ObjectHideFlags: 0
@@ -725,6 +735,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 44658afb593144399b7efc8ff4e7b055,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 82209ee5a779e3749bcc7f47ab30c177, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44658afb593144399b7efc8ff4e7b055, type: 3}
 --- !u!1 &435491738 stripped
@@ -746,7 +761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _chanceOfSoundPercent: 30
-  _lengthOfAnimation: 2
+  _lengthOfAnimation: 27
 --- !u!82 &435491740
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1191,6 +1206,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 0b795b74f51ac4e3e9a9767a08389933,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c2388e815a65a1a498dcaf1da6d07ade, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b795b74f51ac4e3e9a9767a08389933, type: 3}
 --- !u!1 &1231419208 stripped
@@ -1212,7 +1232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _chanceOfSoundPercent: 30
-  _lengthOfAnimation: 2
+  _lengthOfAnimation: 7
 --- !u!82 &1231419210
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1381,6 +1401,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 9c4dc2c7c2d964f2980c00c31525ff6c,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: af69d9ac873e79d4289f76f994a10bf7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c4dc2c7c2d964f2980c00c31525ff6c, type: 3}
 --- !u!1 &1494272967 stripped
@@ -1402,7 +1427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _chanceOfSoundPercent: 30
-  _lengthOfAnimation: 2
+  _lengthOfAnimation: 37
 --- !u!82 &1494272969
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1586,6 +1611,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.91367
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: bff70675fbc9f478683c24995f7753dc,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9784201c33e8439458895e5d77f1d8a3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bff70675fbc9f478683c24995f7753dc, type: 3}
 --- !u!1 &2081970932 stripped
@@ -1607,7 +1637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _chanceOfSoundPercent: 30
-  _lengthOfAnimation: 2
+  _lengthOfAnimation: 17
 --- !u!82 &2081970934
 AudioSource:
   m_ObjectHideFlags: 0

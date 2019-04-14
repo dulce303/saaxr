@@ -10,11 +10,12 @@ public class StemSoundBehavior : MonoBehaviour
     public AudioClip _stereoMix;
 
     private AudioSource _audio;
+    public DropzoneBehavior _currentDropzone;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        _audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -25,6 +26,7 @@ public class StemSoundBehavior : MonoBehaviour
 
     public void SetMix(DropzoneBehavior _dropzone){
 
+        _currentDropzone = _dropzone;
 
         if (_dropzone.DetermineIfInSuitcase())
         {
@@ -46,12 +48,19 @@ public class StemSoundBehavior : MonoBehaviour
     }
 
     public void SetPickupMix (){
+        float _currentTime = _audio.time;
         _audio.mute = false;
         _audio.spatialBlend = 1.0f;
         _audio.clip = _monoMix;
+        _audio.Play();
+        _audio.time = _currentTime;
     }
 
     public void SetMute(){
         _audio.mute = true;
+    }
+
+    public DropzoneBehavior GetDropZone(){
+        return _currentDropzone;
     }
 }

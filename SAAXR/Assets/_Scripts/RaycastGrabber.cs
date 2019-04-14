@@ -31,7 +31,7 @@ public class RaycastGrabber : MonoBehaviour
         MLInput.OnTriggerDown += HandleOnTriggerDown;
 	}
 
-	// Start is called before the first frame update
+
 	void Start()
     {
         _laserLineRenderer = GetComponent<LineRenderer>();
@@ -55,11 +55,12 @@ public class RaycastGrabber : MonoBehaviour
             _hasItem = true;
 
             if (_currentGrabbable.CompareTag("Stem")){
-                StemSoundBehavior _ssBehavior = _currentGrabbable.GetComponent<StemSoundBehavior>();
-                DropzoneBehavior _dzBehavior = _currentDropzone.GetComponent<DropzoneBehavior>();
+                StemSoundBehavior _ssBehavior = _currentGrabbable.GetComponentInChildren<StemSoundBehavior>();
+                DropzoneBehavior _dzBehavior = _ssBehavior.GetDropZone();
 
                 _ssBehavior.SetPickupMix();
                 _dzBehavior.RemoveStem();
+
             }
         } else if (_canDrop){
             _currentGrabbable.transform.parent = _currentDropzone.transform;
@@ -69,12 +70,11 @@ public class RaycastGrabber : MonoBehaviour
             _hasItem = false;
 
             DropzoneBehavior _dzBehavior = _currentDropzone.GetComponent<DropzoneBehavior>();
-            StemSoundBehavior _ssBehavior = _currentGrabbable.GetComponent<StemSoundBehavior>();
+            StemSoundBehavior _ssBehavior = _currentGrabbable.GetComponentInChildren<StemSoundBehavior>();
             if (_dzBehavior._isMuter)
             {
                 _ssBehavior.SetMute();
             }
-            //LOOKING HERERERHEHREHRHERHEHRHEHHREHRHEHRHERHHERHERHR
             else
             {
                 _ssBehavior.SetMix(_dzBehavior);
@@ -176,9 +176,6 @@ public class RaycastGrabber : MonoBehaviour
             _canGrab = false;
             _canDrop = false;
         }
-
-
-
 
     }
 

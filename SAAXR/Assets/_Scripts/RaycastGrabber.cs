@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.MagicLeap;
+using TMPro;
 
 [RequireComponent(typeof(LineRenderer))]
 [RequireComponent(typeof(ControllerConnectionHandler))]
@@ -14,6 +15,8 @@ public class RaycastGrabber : MonoBehaviour
     public Material _missMaterial;
 
     public GameObject _touchpad;
+    public TextMeshPro _volumeNumber;
+    public GameObject _volumeGUI;
     private float _touchpadRadius;
 
     //public int _grabbableLayer = 8;
@@ -45,6 +48,8 @@ public class RaycastGrabber : MonoBehaviour
         Mesh mesh = _touchpad.GetComponent<MeshFilter>().mesh;
         _touchpadRadius = Vector3.Scale(mesh.bounds.extents, _touchpad.transform.lossyScale).x;
 
+        _volumeGUI.SetActive(false);
+
         //_grabbableLayer = 1 << _grabbableLayer;
         //_dropzoneLayer = 1 << _dropzoneLayer;
     }
@@ -71,6 +76,7 @@ public class RaycastGrabber : MonoBehaviour
                 _ssBehavior.SetPickupMix();
                 _dzBehavior.RemoveStem();
 
+                _volumeGUI.SetActive(true);
             }
         } else if (_canDrop){
             _currentGrabbable.transform.parent = _currentDropzone.transform;
@@ -92,6 +98,8 @@ public class RaycastGrabber : MonoBehaviour
             }
             _dzBehavior = null;
             _ssBehavior = null;
+
+            _volumeGUI.SetActive(false);
         }
     }
 
@@ -117,8 +125,11 @@ public class RaycastGrabber : MonoBehaviour
 
         if (controller.Touch1Active)
         {
-            _ssBehavior.SetPitch(Mathf.Clamp(controller.Touch1PosAndForce.y, -3.0f, 3.0f));
-            _ssBehavior.SetVolume(Mathf.Clamp(controller.Touch1PosAndForce.x, 0.0f, 1.0f));
+            //_ssBehavior.SetPitch(Mathf.Clamp(controller.Touch1PosAndForce.y, -3.0f, 3.0f));
+            var _volume = Mathf.Clamp(controller.Touch1PosAndForce.x, 0.0f, 1.0f);
+            _ssBehavior.SetVolume(_volume);
+            _volume = Mathf.RoundToInt((_volume * 10));
+            _volumeNumber.SetText(_volume.ToString());
         }
 
 

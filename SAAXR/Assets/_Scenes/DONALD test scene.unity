@@ -1055,6 +1055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _monoMix: {fileID: 8300000, guid: 63f69f32a85c9d042bd5c3c0163b4731, type: 3}
   _stereoMix: {fileID: 8300000, guid: a72f86f91166c6b4097fef0dfdbc5ada, type: 3}
+  _currentDropzone: {fileID: 0}
 --- !u!1 &1436485017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,6 +1198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _monoMix: {fileID: 8300000, guid: 4989a13a027d853468eb1554da7c5c6b, type: 3}
   _stereoMix: {fileID: 8300000, guid: 0dcb69a508b52074d9b12a7eef86f281, type: 3}
+  _currentDropzone: {fileID: 0}
 --- !u!1 &1511886233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,6 +1631,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20294507499185110, guid: 24158fb1437dc8e418d893939758764d,
+        type: 3}
+      propertyPath: far clip plane
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850404675360181103, guid: 24158fb1437dc8e418d893939758764d,
+        type: 3}
+      propertyPath: m_StabilizationMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850404675360181103, guid: 24158fb1437dc8e418d893939758764d,
+        type: 3}
+      propertyPath: m_ProtectedSurface
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24158fb1437dc8e418d893939758764d, type: 3}

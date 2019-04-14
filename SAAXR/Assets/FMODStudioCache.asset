@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: event:/Character/looperman-l-1887338-0142834-feel-the-bass
   guid: 72c786d293b36d4597a83ecf85123651
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -43,6 +43,25 @@ MonoBehaviour:
   - Name: Desktop
     Value: 6360736
   Exists: 1
+--- !u!114 &-7865530172570517269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD project/SAAXR_3/Build/Desktop/Master Bank.strings.bank
+  lastModified: 636907153420000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2468
+  Exists: 1
 --- !u!114 &-7701711165886133487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,7 +77,7 @@ MonoBehaviour:
   Path: event:/Game Sound/462089__newagesoup__ethereal-woosh
   guid: 1b7ed18163347f48a3cfcb85f197771c
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -81,7 +100,7 @@ MonoBehaviour:
   Path: event:/Game Sound/362241__lalazzylee1__game-wizard-sound-rpg-game
   guid: b1fac487a251894099b1889e577a0c66
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -104,7 +123,7 @@ MonoBehaviour:
   Path: event:/Game Sound/336487__faulkin__boom-01
   guid: 3303e01a85e6f14988f97a43da0ffd1a
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -127,7 +146,7 @@ MonoBehaviour:
   Path: event:/Character/you_wanna_dance
   guid: 4186abb21463754f94b71850f7e5fcd3
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -150,7 +169,7 @@ MonoBehaviour:
   Path: event:/Character/yo_dj_play_my_funki_tune
   guid: f440df073962184ba483f58ddfa69886
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -173,7 +192,7 @@ MonoBehaviour:
   Path: event:/Character/looperman-l-0342174-0035936-djelfo-libertad
   guid: d8e479c49668714cb02e77b3cdadd6eb
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -196,7 +215,7 @@ MonoBehaviour:
   Path: event:/Game Sound/203039__jjhouse4__dropping-body-on-hard-ground
   guid: 906ab76fd797c740b911bf85d819f0c6
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -219,7 +238,7 @@ MonoBehaviour:
   Path: event:/Game Sound/377828__newagesoup__long-wispy-woosh3
   guid: 14abb131999f7340a4f71fa1fd60746d
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -242,7 +261,7 @@ MonoBehaviour:
   Path: event:/SONG/Mono_Female
   guid: c98ab0190ab17e4e90084d048d603396
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -265,7 +284,7 @@ MonoBehaviour:
   Path: event:/Character/weazelbeats-censored-drop-vocal
   guid: c50701fc6407474eb5ccdcb9ab83cbde
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -389,6 +408,26 @@ MonoBehaviour:
   - Name: Desktop
     Value: 6360736
   Exists: 1
+--- !u!114 &-1956564852223868869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Assets/FMOD project/SAAXR_3/Build/Desktop/Master
+    Bank.bank
+  lastModified: 636907153420000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 6360736
+  Exists: 1
 --- !u!114 &-1712935827864191470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,7 +443,7 @@ MonoBehaviour:
   Path: event:/SONG/Stereo_Drum
   guid: 4800357df708434a88815d92861d5c9e
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -427,7 +466,7 @@ MonoBehaviour:
   Path: event:/SONG/Mono_Key pad
   guid: f5af95ff2eab4746a8f7ed104e9c14e2
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -450,7 +489,7 @@ MonoBehaviour:
   Path: event:/SONG/Stereo_Bass
   guid: 3fe13aad2fbbbe439d77dea5e6cd81ec
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -473,7 +512,7 @@ MonoBehaviour:
   Path: event:/Character/looperman-l-0116269-0037118-dextdee-my-oh-my
   guid: 4b24d0480b0734418aaea0a817753c25
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -496,7 +535,7 @@ MonoBehaviour:
   Path: event:/SONG/Mono_Vocoder
   guid: 78ebbc99dc99c242a5601d855df33323
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -517,8 +556,8 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 2466661860253268516}
-  - {fileID: 4855669227294509626}
+  - {fileID: -7865530172570517269}
+  - {fileID: -1956564852223868869}
   EditorEvents:
   - {fileID: 157209412359633909}
   - {fileID: -4749265624383546066}
@@ -549,10 +588,10 @@ MonoBehaviour:
   - {fileID: -1149685360748040435}
   - {fileID: 6801582601719761317}
   MasterBanks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   StringsBanks:
-  - {fileID: 2466661860253268516}
-  stringsBankWriteTime: 636907143277474075
+  - {fileID: -7865530172570517269}
+  stringsBankWriteTime: 636907153420000000
   cacheVersion: 3
 --- !u!114 &157209412359633909
 MonoBehaviour:
@@ -569,7 +608,7 @@ MonoBehaviour:
   Path: event:/Character/looperman-l-0159051-0144689-hey-chants-girl-solo
   guid: 0655bda46167e14bb3586880725ecb1d
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -592,7 +631,7 @@ MonoBehaviour:
   Path: event:/Game Sound/328118__greenvwbeetle__pop-7
   guid: 2472f50b670d3142875d3d3149ac9177
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -634,7 +673,7 @@ MonoBehaviour:
   Path: event:/Game Sound/245933__sophiehall3535__light-woosh
   guid: e258d2cc89807246b7cf9523eba961d3
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -660,7 +699,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 2468
-  Exists: 1
+  Exists: 0
 --- !u!114 &2569910383145460876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -676,7 +715,7 @@ MonoBehaviour:
   Path: event:/SONG/Mono_Bells
   guid: b8118b06e815654bb1e1e784157a60f4
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -699,7 +738,7 @@ MonoBehaviour:
   Path: event:/Game Sound/377830__newagesoup__long-wispy-woosh1
   guid: deed5a0b10f2ad4d9f0a9ba84828d128
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -741,7 +780,7 @@ MonoBehaviour:
   Path: event:/Character/check_it_out
   guid: 154e412d19f64848a5eb286e63c35363
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -764,7 +803,7 @@ MonoBehaviour:
   Path: event:/Game Sound/437662__dersuperanton__woosh
   guid: 2b3e6f761553a649881c22fc1d90db78
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -791,7 +830,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 6360736
-  Exists: 1
+  Exists: 0
 --- !u!114 &5349166177199675791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,7 +846,7 @@ MonoBehaviour:
   Path: event:/Character/female-ayo-turn-up
   guid: ebc1b7901a445143a6d2b21f6a72be37
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -830,7 +869,7 @@ MonoBehaviour:
   Path: event:/Game Sound/411642__inspectorj__pop-high-a-h1
   guid: c35e73d54fdb91459bc46acff0da76f3
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -872,7 +911,7 @@ MonoBehaviour:
   Path: event:/Game Sound/463388__vilkas-sound__vs-pop-4
   guid: fc0ad16fd834814ab7eaedea1c85238e
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -895,7 +934,7 @@ MonoBehaviour:
   Path: event:/SONG/Mono_Vocal Siren
   guid: 7b5541b167fcae43bb196242a04609d7
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -918,7 +957,7 @@ MonoBehaviour:
   Path: event:/Character/looperman-l-1781121-0139522-bouncy-hip-hop-chants
   guid: d656d36f152c2e48aeb802bae841d32b
   Banks:
-  - {fileID: 4855669227294509626}
+  - {fileID: -1956564852223868869}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1

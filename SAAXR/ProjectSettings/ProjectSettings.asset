@@ -633,7 +633,7 @@ PlayerSettings:
     m_ModelFolderPath: 
     m_PortalFolderPath: 
   luminCert:
-    m_CertPath: /Users/eyelidlick/Downloads/saaxr.cert
+    m_CertPath: /Users/eyelidlick/Downloads/cert/test.cert
     m_SignPackage: 1
   luminIsChannelApp: 0
   luminVersion:

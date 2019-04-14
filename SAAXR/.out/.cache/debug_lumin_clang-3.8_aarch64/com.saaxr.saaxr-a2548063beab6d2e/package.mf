@@ -1,0 +1,283 @@
+{
+ "entries": [
+  {
+   "compression": 8,
+   "hash": "46ed8523661a8b0d7e8fcba466902ab07affb20f",
+   "pkgpath": "Data/Managed/Metadata/global-metadata.dat",
+   "size": 3366152,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/Managed/Metadata/global-metadata.dat"
+  },
+  {
+   "compression": 8,
+   "hash": "300b2a02031ba741fe0a75406c6ed3f7b03af96c",
+   "pkgpath": "bin/libil2cpp.so",
+   "size": 52233808,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/Native/libil2cpp.so",
+   "xfrm_flags": {
+    "signed": {
+     "cert": "/Users/eyelidlick/Downloads/cert/test.cert"
+    },
+    "taildata": {
+     "debuggable": true,
+     "sbox": "USER",
+     "version": 3
+    }
+   },
+   "xfrm_hash": "525184a07be1fd0533e70ee2f2d0a91f02612c0a",
+   "xfrm_path": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/.out/.cache/debug_lumin_clang-3.8_aarch64/com.saaxr.saaxr-a2548063beab6d2e/libil2cpp.so-25aecdad3b678cb0",
+   "xfrm_size": 52234566
+  },
+  {
+   "compression": 8,
+   "hash": "6b3b1067e8eeb28457c572292a209cc931e93089",
+   "pkgpath": "bin/AudioPluginMSASpatializer.so",
+   "size": 269360,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/Plugins/AudioPluginMSASpatializer.so",
+   "xfrm_flags": {
+    "signed": {
+     "cert": "/Users/eyelidlick/Downloads/cert/test.cert"
+    },
+    "taildata": {
+     "debuggable": true,
+     "sbox": "USER",
+     "version": 3
+    }
+   },
+   "xfrm_hash": "8d5e8fe648b7f83d3a5e38a079a29b88066b46bc",
+   "xfrm_path": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/.out/.cache/debug_lumin_clang-3.8_aarch64/com.saaxr.saaxr-a2548063beab6d2e/AudioPluginMSASpatializer.so-0687ad090b07467b",
+   "xfrm_size": 270118
+  },
+  {
+   "compression": 8,
+   "hash": "0dcf6d6b8f274d400b8544696e7a6f9f81c6ba81",
+   "pkgpath": "bin/UnityEngine.TestRunner.dll",
+   "size": 100864,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/Plugins/UnityEngine.TestRunner.dll"
+  },
+  {
+   "compression": 8,
+   "hash": "06995ecae530eca2b6f5337b27dbdfcb727599da",
+   "pkgpath": "bin/UnityMagicLeap.so",
+   "size": 1495800,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/Plugins/UnityMagicLeap.so",
+   "xfrm_flags": {
+    "signed": {
+     "cert": "/Users/eyelidlick/Downloads/cert/test.cert"
+    },
+    "taildata": {
+     "debuggable": true,
+     "sbox": "USER",
+     "version": 3
+    }
+   },
+   "xfrm_hash": "aff9bb3979250e649cd2c0627f54fee13a5e54a0",
+   "xfrm_path": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/.out/.cache/debug_lumin_clang-3.8_aarch64/com.saaxr.saaxr-a2548063beab6d2e/UnityMagicLeap.so-0687ad090b07467b",
+   "xfrm_size": 1496558
+  },
+  {
+   "compression": 8,
+   "hash": "e36553e9a3113280d39db515a350a0036cda878d",
+   "pkgpath": "bin/libml_camera_plugin.so",
+   "size": 14184,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/Plugins/libml_camera_plugin.so",
+   "xfrm_flags": {
+    "signed": {
+     "cert": "/Users/eyelidlick/Downloads/cert/test.cert"
+    },
+    "taildata": {
+     "debuggable": true,
+     "sbox": "USER",
+     "version": 3
+    }
+   },
+   "xfrm_hash": "cf8639c2c9c77a41b0423eaaf676d65f97a74f22",
+   "xfrm_path": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/.out/.cache/debug_lumin_clang-3.8_aarch64/com.saaxr.saaxr-a2548063beab6d2e/libml_camera_plugin.so-0687ad090b07467b",
+   "xfrm_size": 14942
+  },
+  {
+   "compression": 8,
+   "hash": "0ee8bd5ed3f83c8d11c84a597fb375ec525b0642",
+   "pkgpath": "bin/libml_mediaplayer_plugin.so",
+   "size": 67624,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/Plugins/libml_mediaplayer_plugin.so",
+   "xfrm_flags": {
+    "signed": {
+     "cert": "/Users/eyelidlick/Downloads/cert/test.cert"
+    },
+    "taildata": {
+     "debuggable": true,
+     "sbox": "USER",
+     "version": 3
+    }
+   },
+   "xfrm_hash": "fd0d8fc92a18eac737e0081e22e01966845286ba",
+   "xfrm_path": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/.out/.cache/debug_lumin_clang-3.8_aarch64/com.saaxr.saaxr-a2548063beab6d2e/libml_mediaplayer_plugin.so-0687ad090b07467b",
+   "xfrm_size": 68382
+  },
+  {
+   "compression": 8,
+   "hash": "984e4d2049ed5491b970ba15d1e8c8cadac0896e",
+   "pkgpath": "bin/nunit.framework.dll",
+   "size": 339968,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/Plugins/nunit.framework.dll"
+  },
+  {
+   "compression": 8,
+   "hash": "e6124da6073b916e29e013cf3ae3f58a4c5fdb0e",
+   "pkgpath": "Data/Resources/mscorlib.dll-resources.dat",
+   "size": 337563,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/Resources/mscorlib.dll-resources.dat"
+  },
+  {
+   "compression": 8,
+   "hash": "63c7ca62020949b1c87b1439f31b7a9719db98c1",
+   "pkgpath": "Data/Resources/unity default resources",
+   "size": 3652028,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/Resources/unity default resources"
+  },
+  {
+   "compression": 8,
+   "hash": "1fdd94a886b1019cd3f62d85935f2e2b2dda0711",
+   "pkgpath": "Data/Resources/unity_builtin_extra",
+   "size": 754668,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/Resources/unity_builtin_extra"
+  },
+  {
+   "compression": 8,
+   "hash": "07a1a6072f5e1bb3a3f4905632232dc66e76c2d5",
+   "pkgpath": "Data/UnitySubsystems/UnityMagicLeap/UnitySubsystemsManifest.json",
+   "size": 168,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/UnitySubsystems/UnityMagicLeap/UnitySubsystemsManifest.json"
+  },
+  {
+   "compression": 8,
+   "hash": "9f9d9fdfae69214ea57a2416e60a9fe924367caa",
+   "pkgpath": "Data/boot.config",
+   "size": 144,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/boot.config"
+  },
+  {
+   "compression": 8,
+   "hash": "3e94b58fb48cb49c297aedb52bbaa9c86b1e8c52",
+   "pkgpath": "Data/globalgamemanagers",
+   "size": 44232,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/globalgamemanagers"
+  },
+  {
+   "compression": 8,
+   "hash": "625c333c413d77856c61c28e8f040a93771449eb",
+   "pkgpath": "Data/globalgamemanagers.assets",
+   "size": 45964,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/globalgamemanagers.assets"
+  },
+  {
+   "compression": 8,
+   "hash": "8446949427dd527bf8b93f0a28f41153690e4650",
+   "pkgpath": "Data/level0",
+   "size": 157604,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/level0"
+  },
+  {
+   "compression": 8,
+   "hash": "4644efb8eceaff5b48f09660f37b4fe4be1f7a6b",
+   "pkgpath": "Data/resources.assets",
+   "size": 749960,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/resources.assets"
+  },
+  {
+   "compression": 8,
+   "hash": "bf300bf24e847da9b78fd0dd00510a1c95e78b15",
+   "pkgpath": "Data/resources.assets.resS",
+   "size": 710032,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/resources.assets.resS"
+  },
+  {
+   "compression": 8,
+   "hash": "08da0d237289ef9a401998c781f75429a8f98c97",
+   "pkgpath": "Data/sharedassets0.assets",
+   "size": 10105744,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/sharedassets0.assets"
+  },
+  {
+   "compression": 8,
+   "hash": "5440a21840c7dd8f8328a450d3693b31bb238e97",
+   "pkgpath": "Data/sharedassets0.assets.resS",
+   "size": 8467840,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/sharedassets0.assets.resS"
+  },
+  {
+   "compression": 8,
+   "hash": "4778d97be537955844bf990b2630714a2057d3b0",
+   "pkgpath": "Data/sharedassets0.resource",
+   "size": 4143936,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/sharedassets0.resource"
+  },
+  {
+   "compression": 8,
+   "hash": "83809f07181ae9ea95470924b7a796418637d9c8",
+   "pkgpath": "bin/Player.elf",
+   "size": 20263912,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Player.elf",
+   "xfrm_flags": {
+    "signed": {
+     "cert": "/Users/eyelidlick/Downloads/cert/test.cert"
+    },
+    "taildata": {
+     "debuggable": true,
+     "sbox": "USER",
+     "version": 3
+    }
+   },
+   "xfrm_hash": "b8f21a787884b9e87cd19307b99d4034108eacbb",
+   "xfrm_path": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/.out/.cache/debug_lumin_clang-3.8_aarch64/com.saaxr.saaxr-a2548063beab6d2e/Player.elf-6d5526bffd7643c1",
+   "xfrm_size": 20264670
+  },
+  {
+   "compression": 8,
+   "hash": "c0320d49a77e295c3e989e1c4de3b33370f12b55",
+   "pkgpath": "manifest.xml",
+   "size": 3373,
+   "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/manifest.xml",
+   "xfrm_flags": {
+    "manifest": {
+     "cert_hash": "773ea7afbcf31bc5673e33e2cfcb7084c1dc9ad3",
+     "developer_id": "355d8dd8-cd3e-4cb9-986b-631018e1a4f1"
+    }
+   },
+   "xfrm_hash": "38c82dde598d3110f025fc382924c449659a2b30",
+   "xfrm_path": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/.out/.cache/debug_lumin_clang-3.8_aarch64/com.saaxr.saaxr-a2548063beab6d2e/manifest.xml-6d5526bffd7643c1",
+   "xfrm_size": 1114
+  },
+  {
+   "compression": 8,
+   "hash": "5925de9f4d7b83c65d1fd7b25ced5f0bf8c27e73",
+   "pkgpath": "bin/libc++_shared.so",
+   "size": 976832,
+   "src": "/Users/eyelidlick/MagicLeap/mlsdk/v0.20.0/lumin/stl/libc++/lib/libc++_shared.so",
+   "xfrm_flags": {
+    "signed": {
+     "cert": "/Users/eyelidlick/Downloads/cert/test.cert"
+    },
+    "taildata": {
+     "debuggable": true,
+     "sbox": "USER",
+     "version": 3
+    }
+   },
+   "xfrm_hash": "a78b165e030a0ed5e4d8a6540a9afbcc476cac89",
+   "xfrm_path": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/.out/.cache/debug_lumin_clang-3.8_aarch64/com.saaxr.saaxr-a2548063beab6d2e/libc++_shared.so-02aa16b44160f855",
+   "xfrm_size": 977590
+  }
+ ],
+ "pkgflags": {
+  "signed": {
+   "cert": "/Users/eyelidlick/Downloads/cert/test.cert"
+  },
+  "taildata": {
+   "debuggable": true,
+   "devcert": "/Users/eyelidlick/Downloads/cert/test.cert",
+   "sbox": "USER",
+   "version": 3
+  }
+ }
+}

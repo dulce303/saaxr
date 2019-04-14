@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/DONALD test scene.unity
     guid: b55d2edd3f1384c2faa60344eb8b995a
+  - enabled: 1
+    path: Assets/_Scenes/_Final Build Scene.unity
+    guid: 9c6e9d648203b4a19a275970f1f02307
   m_configObjects: {}

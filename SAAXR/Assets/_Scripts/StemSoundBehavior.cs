@@ -24,6 +24,16 @@ public class StemSoundBehavior : MonoBehaviour
         
     }
 
+    public void SetPitch(float _newPitch)
+    {
+        _audio.pitch = _newPitch;
+    }
+
+    public void SetVolume(float _newVolume)
+    {
+        _audio.volume = _newVolume;
+    }
+
     public void SetMix(DropzoneBehavior _dropzone){
 
         _currentDropzone = _dropzone;

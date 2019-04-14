@@ -61,13 +61,14 @@ public class RaycastGrabber : MonoBehaviour
 
     private void HandleOnTriggerDown(byte controllerId, float pressure)
     {
-        if (_canGrab)
+        if (_canGrab && _hasItem == false)
         {
             if (_currentGrabbable != null)
             {
                 _currentPickedUpStem = _currentGrabbable;
                 _currentPickedUpStem.transform.SetParent(_grabPoint);
                 _currentPickedUpStem.transform.position = _grabPoint.position;
+                _hasItem = true;
 
                 _currentGrabbable = null;
 
@@ -76,7 +77,7 @@ public class RaycastGrabber : MonoBehaviour
 
             }
         }
-        else if (_canDrop)
+        else if (_canDrop && _hasItem)
         {
             if (_currentDropzone != null && _currentPickedUpStem != null)
             {
@@ -86,6 +87,8 @@ public class RaycastGrabber : MonoBehaviour
 
                 _currentPickedUpStem = null;
                 _currentDropzone = null;
+                _hasItem = false;
+                _canDrop = false;
 
                 _volumeGUI.SetActive(false);
 

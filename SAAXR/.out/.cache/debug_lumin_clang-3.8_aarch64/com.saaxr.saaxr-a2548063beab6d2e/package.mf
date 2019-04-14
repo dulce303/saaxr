@@ -2,16 +2,16 @@
  "entries": [
   {
    "compression": 8,
-   "hash": "46ed8523661a8b0d7e8fcba466902ab07affb20f",
+   "hash": "f8ab428c483c50cb4533d6221ebb99423eeb3935",
    "pkgpath": "Data/Managed/Metadata/global-metadata.dat",
-   "size": 3366152,
+   "size": 3367136,
    "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/Managed/Metadata/global-metadata.dat"
   },
   {
    "compression": 8,
-   "hash": "300b2a02031ba741fe0a75406c6ed3f7b03af96c",
+   "hash": "1d623664d551cd35365b1e85d5d2bdcc85f21996",
    "pkgpath": "bin/libil2cpp.so",
-   "size": 52233808,
+   "size": 52243424,
    "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/Native/libil2cpp.so",
    "xfrm_flags": {
     "signed": {
@@ -23,9 +23,9 @@
      "version": 3
     }
    },
-   "xfrm_hash": "525184a07be1fd0533e70ee2f2d0a91f02612c0a",
+   "xfrm_hash": "4bb3e7333ad720346fdf4318802c6d00c58ad387",
    "xfrm_path": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/.out/.cache/debug_lumin_clang-3.8_aarch64/com.saaxr.saaxr-a2548063beab6d2e/libil2cpp.so-25aecdad3b678cb0",
-   "xfrm_size": 52234566
+   "xfrm_size": 52244182
   },
   {
    "compression": 8,
@@ -137,9 +137,9 @@
   },
   {
    "compression": 8,
-   "hash": "1fdd94a886b1019cd3f62d85935f2e2b2dda0711",
+   "hash": "f423044c03b71ed40169aa163895a624153c6c39",
    "pkgpath": "Data/Resources/unity_builtin_extra",
-   "size": 754668,
+   "size": 816268,
    "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/Resources/unity_builtin_extra"
   },
   {
@@ -158,30 +158,30 @@
   },
   {
    "compression": 8,
-   "hash": "3e94b58fb48cb49c297aedb52bbaa9c86b1e8c52",
+   "hash": "bef26707cfdadcdf7f7b0f3e9c3f632ea6837085",
    "pkgpath": "Data/globalgamemanagers",
-   "size": 44232,
+   "size": 44368,
    "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/globalgamemanagers"
   },
   {
    "compression": 8,
-   "hash": "625c333c413d77856c61c28e8f040a93771449eb",
+   "hash": "d4f039a09bde15e53c294f51a39f1ac3204f905c",
    "pkgpath": "Data/globalgamemanagers.assets",
-   "size": 45964,
+   "size": 46060,
    "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/globalgamemanagers.assets"
   },
   {
    "compression": 8,
-   "hash": "8446949427dd527bf8b93f0a28f41153690e4650",
+   "hash": "dd0c0ce490f139ebb11d0ba49559fb6e7702b285",
    "pkgpath": "Data/level0",
-   "size": 157604,
+   "size": 165516,
    "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/level0"
   },
   {
    "compression": 8,
-   "hash": "4644efb8eceaff5b48f09660f37b4fe4be1f7a6b",
+   "hash": "d1e20701454e166baf16f7c7162531183837edf4",
    "pkgpath": "Data/resources.assets",
-   "size": 749960,
+   "size": 748360,
    "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/resources.assets"
   },
   {
@@ -193,23 +193,23 @@
   },
   {
    "compression": 8,
-   "hash": "08da0d237289ef9a401998c781f75429a8f98c97",
+   "hash": "f3af13386cc637e47f68fb6a71ebff4c9b3b8e26",
    "pkgpath": "Data/sharedassets0.assets",
-   "size": 10105744,
+   "size": 16584800,
    "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/sharedassets0.assets"
   },
   {
    "compression": 8,
-   "hash": "5440a21840c7dd8f8328a450d3693b31bb238e97",
+   "hash": "3de1232e42f8ae8db34c262bb8d3d7d481c9287f",
    "pkgpath": "Data/sharedassets0.assets.resS",
-   "size": 8467840,
+   "size": 19552112,
    "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/sharedassets0.assets.resS"
   },
   {
    "compression": 8,
-   "hash": "4778d97be537955844bf990b2630714a2057d3b0",
+   "hash": "44cf9bf391569c2ab486b47b89683d4810421202",
    "pkgpath": "Data/sharedassets0.resource",
-   "size": 4143936,
+   "size": 38107552,
    "src": "/Users/eyelidlick/Documents/_Projects/SAAXR/SAAXR/Temp/StagingArea/Data/sharedassets0.resource"
   },
   {

@@ -8,7 +8,7 @@ public class AudioLoudnessTester : MonoBehaviour
     public float updateStep = 0.1f;
     public int sampleDataLength = 1024;
 
-    public GameObject _scaler;
+    public GameObject[] _scaler;
     public float _scaleMultiplier = 1000f;
 
     private float currentUpdateTime = 0f;
@@ -20,7 +20,7 @@ public class AudioLoudnessTester : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
-
+        //_scaler = new GameObject[12];
         clipSampleData = new float[sampleDataLength];
 
     }
@@ -52,11 +52,20 @@ public class AudioLoudnessTester : MonoBehaviour
     }
 
     public void SetScale(float _loudness){
+
+
+
         _loudness = _loudness * _scaleMultiplier;
         //Debug.Log("Loudness = " + clipLoudness);
         _buffer = Mathf.Lerp(_buffer, _loudness, Time.deltaTime * 2f);
+        foreach (var item in _scaler)
+        {
+            item.transform.localScale = new Vector3(_buffer, _buffer, _buffer);
 
-        _scaler.transform.localScale = new Vector3(_buffer, _buffer, _buffer);
+        }
+
+
+
     }
 
 }

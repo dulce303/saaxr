@@ -19,16 +19,19 @@ public class RaycastGrabber : MonoBehaviour
     public GameObject _volumeGUI;
     private float _touchpadRadius;
 
+
     //public int _grabbableLayer = 8;
     //public int _dropzoneLayer = 9;
 
     private bool _hasItem = false;
     private bool _canGrab = false;
     private bool _canDrop = false;
+    private bool _canOpenContainer = false;
     private GameObject _currentGrabbable = null;
-    private GameObject _currentDropzone = null;
+    private DropzoneBehavior _currentDropzone = null;
     private StemSoundBehavior _ssBehavior = null;
     private DropzoneBehavior _dzBehavior = null;
+    private ContainerBehavior _containerBehavior = null;
 
     private LineRenderer _laserLineRenderer = null;
     private ControllerConnectionHandler _controllerConnectionHandler = null;
@@ -62,6 +65,12 @@ public class RaycastGrabber : MonoBehaviour
 
     private void HandleOnTriggerDown(byte controllerId, float pressure)
     {
+        
+    }
+
+    /*
+    private void HandleOnTriggerDown(byte controllerId, float pressure)
+    {
         if (_canGrab){
             _currentGrabbable.transform.parent = _grabPoint;
             _currentGrabbable.transform.position = _grabPoint.position;
@@ -78,7 +87,8 @@ public class RaycastGrabber : MonoBehaviour
 
                 _volumeGUI.SetActive(true);
             }
-        } else if (_canDrop){
+        } else if (_canDrop)
+        {
             _currentGrabbable.transform.parent = _currentDropzone.transform;
             _currentGrabbable.transform.position = _currentDropzone.transform.position;
             _currentGrabbable.transform.rotation = _currentDropzone.transform.rotation;
@@ -100,8 +110,14 @@ public class RaycastGrabber : MonoBehaviour
             _ssBehavior = null;
 
             _volumeGUI.SetActive(false);
+        } 
+        else if (_canOpenContainer)
+        {
+            _containerBehavior.Open();
+            _containerBehavior = null;
         }
     }
+    */
 
 	// Update is called once per frame
 	void Update()
@@ -136,6 +152,114 @@ public class RaycastGrabber : MonoBehaviour
 
     }
 
+    private void LaserGrabber()
+    {
+        Vector3 _lineEndPoint;
+        bool _useHitMat = false;
+
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 50f))
+        {
+            if (hit.transform.CompareTag("Character"))
+            {
+                CharacterAnimationBehavior _char = hit.transform.GetComponent<CharacterAnimationBehavior>();
+                _char.TriggerAnim();
+                ClearAllCurrents();
+
+                _lineEndPoint = hit.point;
+                _useHitMat = false;
+            }
+            else if (hit.transform.CompareTag("Container"))
+            {
+                _containerBehavior = hit.transform.GetComponent<ContainerBehavior>();
+                _canOpenContainer = true;
+
+                _lineEndPoint = hit.point;
+                _useHitMat = true;
+
+            }
+            else if (_hasItem)
+            {
+                //If we've got an item we need to
+                _canGrab = false;
+                _volumeGUI.SetActive(true);
+
+                if (hit.transform.CompareTag("Dropzone"))
+                {
+                    _canDrop = true;
+                    _currentDropzone = hit.transform.GetComponent<DropzoneBehavior>();
+
+
+                    _lineEndPoint = hit.point;
+                    _useHitMat = true;
+                }
+                else
+                {
+                    //Thunk
+                    ClearAllCurrents();
+
+
+                    _lineEndPoint = hit.point;
+                    _useHitMat = false;
+                }
+            }
+            else if (!_hasItem)
+            {
+                //If we don't have an item we need to
+                _canDrop = false;
+                _volumeGUI.SetActive(false);
+
+                if (hit.transform.CompareTag("Stem"))
+                {
+                    _canGrab = true;
+                    _ssBehavior = hit.transform.GetComponent<StemSoundBehavior>();
+
+                    _lineEndPoint = hit.point;
+                    _useHitMat = true;
+                }
+                else
+                {
+                    //Thunk
+                    ClearAllCurrents();
+                    _lineEndPoint = hit.point;
+                    _useHitMat = false;
+                }
+            }
+        }
+        else
+        {
+            //Miss
+            ClearAllCurrents();
+            _lineEndPoint = transform.TransformDirection(Vector3.forward * 10f);
+            _useHitMat = false;
+        }
+
+        UpdateLine(_lineEndPoint, _useHitMat);
+    }
+
+    private void ClearAllCurrents(){
+        _currentDropzone = null;
+        _currentGrabbable = null;
+        _ssBehavior = null;
+        _containerBehavior = null;
+        _canGrab = false;
+        _canDrop = false;
+        _canOpenContainer = false;
+    }
+
+    private void UpdateLine(Vector3 _endPoint, bool _didHit){
+        _laserLineRenderer.SetPosition(0, transform.position);
+        _laserLineRenderer.SetPosition(1, _endPoint);
+        if (_didHit){
+            _laserLineRenderer.material = _hitMaterial;
+        } else{
+            _laserLineRenderer.material = _missMaterial;
+        }
+    }
+
+
+    //Old, over-complex LaserGrabber
+    /*
     private void LaserGrabber(){
         _laserLineRenderer.SetPosition(0, transform.position);
         RaycastHit hit;
@@ -151,6 +275,8 @@ public class RaycastGrabber : MonoBehaviour
                 _currentDropzone = null;
                 _laserLineRenderer.material = _missMaterial;
                 _laserLineRenderer.SetPosition(1, hit.point);
+                _canOpenContainer = false;
+                _containerBehavior = null;
             }
 
             else if (_hasItem)
@@ -166,6 +292,17 @@ public class RaycastGrabber : MonoBehaviour
                         Debug.Log("Has item and hit dropzone");
                         _canDrop = true;
                         _currentDropzone = hit.transform.gameObject;
+                        _containerBehavior = null;
+                        _canOpenContainer = false;
+                    }
+                    else if (hit.transform.CompareTag("Container"))
+                    {
+                        _laserLineRenderer.material = _hitMaterial;
+                        _laserLineRenderer.SetPosition(1, hit.point);
+                        if (_containerBehavior != null){
+                            _containerBehavior = hit.transform.GetComponent<ContainerBehavior>();
+                        }
+                        _canOpenContainer = true;
                     }
                     else if (hit.transform.tag != null)
                     {
@@ -174,8 +311,12 @@ public class RaycastGrabber : MonoBehaviour
                         Debug.Log("Has item and hit non-dropzone");
                         _canDrop = false;
                         _currentDropzone = null;
+                        _containerBehavior = null;
+                        _canOpenContainer = false;
                     }
                 }
+
+
                 else
                 {
                     _laserLineRenderer.material = _missMaterial;
@@ -183,6 +324,8 @@ public class RaycastGrabber : MonoBehaviour
                     Debug.Log("Has item and missed");
                     _canDrop = false;
                     _currentDropzone = null;
+                    _containerBehavior = null;
+                    _canOpenContainer = false;
                 }
             }
 
@@ -200,6 +343,18 @@ public class RaycastGrabber : MonoBehaviour
                         Debug.Log("Doesn't have item and hit grabbable");
                         _canGrab = true;
                         _currentGrabbable = hit.transform.gameObject;
+                        _containerBehavior = null;
+                        _canOpenContainer = false;
+                    }
+                    else if (hit.transform.CompareTag("Container"))
+                    {
+                        _laserLineRenderer.material = _hitMaterial;
+                        _laserLineRenderer.SetPosition(1, hit.point);
+                        if (_containerBehavior != null)
+                        {
+                            _containerBehavior = hit.transform.GetComponent<ContainerBehavior>();
+                        }
+                        _canOpenContainer = true;
                     }
                     else if (hit.transform.tag != null)
                     {
@@ -208,6 +363,8 @@ public class RaycastGrabber : MonoBehaviour
                         Debug.Log("Doesn't have item and hit non-grabbable");
                         _canGrab = false;
                         _currentGrabbable = null;
+                        _containerBehavior = null;
+                        _canOpenContainer = false;
                     }
                 }
                 else
@@ -217,6 +374,8 @@ public class RaycastGrabber : MonoBehaviour
                     Debug.Log("Doesn't have item and didn't hit");
                     _canGrab = false;
                     _currentGrabbable = null;
+                    _containerBehavior = null;
+                    _canOpenContainer = false;
                 }
             }
 
@@ -228,8 +387,10 @@ public class RaycastGrabber : MonoBehaviour
             _currentDropzone = null;
             _canGrab = false;
             _canDrop = false;
+            _containerBehavior = null;
         }
     }
+    */
 
 
 }

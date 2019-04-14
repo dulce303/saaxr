@@ -42,6 +42,8 @@ public class StemSoundBehavior : MonoBehaviour
         {
             float _currentTime = _audio.time;
 
+            _audio.spatialize = false;
+
             _audio.spatialBlend = 0.0f;
             _audio.clip = _stereoMix;
 
@@ -50,6 +52,7 @@ public class StemSoundBehavior : MonoBehaviour
         } else{
             float _currentTime = _audio.time;
 
+            _audio.spatialize = true;
             _audio.spatialBlend = 1.0f;
             _audio.clip = _monoMix;
             _audio.Play();

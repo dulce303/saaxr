@@ -53,12 +53,33 @@ public class RaycastGrabber : MonoBehaviour
 
             _canGrab = false;
             _hasItem = true;
+
+            if (_currentGrabbable.CompareTag("Stem")){
+                StemSoundBehavior _ssBehavior = _currentGrabbable.GetComponent<StemSoundBehavior>();
+                DropzoneBehavior _dzBehavior = _currentDropzone.GetComponent<DropzoneBehavior>();
+
+                _ssBehavior.SetPickupMix();
+                _dzBehavior.RemoveStem();
+            }
         } else if (_canDrop){
             _currentGrabbable.transform.parent = _currentDropzone.transform;
             _currentGrabbable.transform.position = _currentDropzone.transform.position;
             _currentGrabbable.transform.rotation = _currentDropzone.transform.rotation;
             _canDrop = false;
             _hasItem = false;
+
+            DropzoneBehavior _dzBehavior = _currentDropzone.GetComponent<DropzoneBehavior>();
+            StemSoundBehavior _ssBehavior = _currentGrabbable.GetComponent<StemSoundBehavior>();
+            if (_dzBehavior._isMuter)
+            {
+                _ssBehavior.SetMute();
+            }
+            //LOOKING HERERERHEHREHRHERHEHRHEHHREHRHEHRHERHHERHERHR
+            else
+            {
+                _ssBehavior.SetMix(_dzBehavior);
+                _dzBehavior.SetStem(_ssBehavior);
+            }
         }
     }
 
